@@ -1,0 +1,23 @@
+apiVersion: gateway.kyma-project.io/v1beta1
+kind: APIRule
+metadata:
+  name: get-file-rule
+  namespace: dev
+spec:
+  gateway: kyma-system/kyma-gateway
+  host: get-file-host.c-6b6b2f3.kyma.ondemand.com
+  rules:
+    - accessStrategies:
+        - config: {}
+          handler: allow
+      methods:
+        - GET
+        - POST
+        - PUT
+        - PATCH
+        - DELETE
+        - HEAD
+      path: /.*
+  service:
+    name: get-file
+    port: 80

@@ -1,0 +1,15 @@
+name: get-file
+namespace: dev
+runtime: nodejs18
+source:
+  sourceType: inline
+env:
+  - name: REDIS_PASSWORD
+    value: kPppOZp2hC
+  - name: REDIS_PORT
+    value: "6379"
+  - name: REDIS_HOST
+    value: redis.dev.svc.cluster.local
+  - name: API_SERVER_URL
+    value: https://qkz57.wiremockapi.cloud
+schemaVersion: v0
